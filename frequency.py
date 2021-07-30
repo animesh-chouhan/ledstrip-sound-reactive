@@ -11,18 +11,19 @@ RECORD_SECONDS = 40
 def get_color(freq):
     if freq > 0 and freq <= 300:
         # return "#800080"
-        return "\u001b[44mBLUE"
+        return "\u001b[44m" + str(freq)
     elif freq > 300 and freq <= 1500:
         # return "#00FFFF"
-        return "\u001b[46mCYAN"
+        return "\u001b[46m" + str(freq)
     elif freq > 1500 and freq <= 5000:
         # return "#98FF98"
-        return "\u001b[42mGREEN"
+        return "\u001b[42m" + str(freq)
     elif freq > 5000 and freq <= 19000:
-        # return "E3242B"
-        return "\u001b[41mRED"
+        # return "#FF0090"
+        return "\u001b[45m" + str(freq)
     elif freq > 19000:
-        return "\u001b[45mMAGENTA"
+        # return "#E3242B"
+        return "\u001b[41m" + str(freq)
 
 
 def get_peak_frequency(data):
